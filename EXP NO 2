@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+    // Method to compare two usernames
+    public static boolean areUsernamesMatching(String username1, String username2) {
+        return username1.equals(username2);
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        try {
+            System.out.println("Enter the username:");
+            String str1 = in.nextLine();
+            System.out.println("Re-enter the username:");
+            String str2 = in.nextLine();
+
+            if (areUsernamesMatching(str1, str2)) {
+                System.out.println("Usernames match.");
+            } else {
+                System.out.println("Usernames do not match.");
+            }
+        } finally {
+            in.close();
+        }
+    }
+}
