@@ -1,15 +1,24 @@
 import java.util.Scanner;
 
-public class program6 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Enter a decimal number: ");
-        int num = scanner.nextInt();
-        
-        System.out.println("Binary: " + Integer.toBinaryString(num));
-        System.out.println("Octal: " + Integer.toOctalString(num));
+public class Main {
+    public static String toBinary(int decimal) {
+        return Integer.toBinaryString(decimal);
+    }
 
-        scanner.close();
+    public static String toOctal(int decimal) {
+        return Integer.toOctalString(decimal);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int decimal = sc.nextInt();
+        sc.close();
+
+        String binary = toBinary(decimal);
+        String octal = toOctal(decimal);
+
+        System.out.println("Binary equivalent: " + binary);
+        System.out.println("Octal equivalent: " + octal);
     }
 }
